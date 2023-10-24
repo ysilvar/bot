@@ -15,5 +15,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+# Set environment variables
+ENV HOST 0.0.0.0
+
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD [ "node", "server.js" ]
